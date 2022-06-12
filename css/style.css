@@ -1,0 +1,418 @@
+/*********************************************  GOOGLE FONT  *********************************************/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* S T A R T     G L O B E L     S T Y L E */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-main: #009ad8;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1e202b;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* E N D     G L O B E L     S T Y L E */
+
+/* ************************************************************************************************************************* */
+
+/* S T A R T     N A V B A R     S T Y L E */
+.nav {
+  padding: 3.125rem 0;
+}
+.nav .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.nav .brand img {
+  width: 64px;
+}
+
+.nav .brand .logo h1 {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.nav .brand .logo h1 span {
+  animation: letterWave 1s infinite ease-in-out alternate;
+  /* animation-delay: calc(var(--order) * 100ms); */
+  font-variation-settings: "wght" 50;
+  letter-spacing: 0;
+}
+
+@keyframes letterWave {
+  to {
+    font-variation-settings: "wght" 850;
+    letter-spacing: -2px;
+  }
+}
+
+.nav .brand .logo small {
+  font-size: 0.625rem;
+  color: #bfc1cb;
+}
+
+.nav .menu ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav .menu ul li a {
+  display: block;
+  padding: 0.3125rem 1.5625rem;
+  text-transform: capitalize;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.nav .menu ul li a.active {
+  color: var(--color-main);
+  border: 2px solid var(--color-main);
+  border-radius: 20px;
+}
+
+.nav .menu ul li a:hover {
+  color: var(--color-main);
+  border: 2px solid var(--color-main);
+  border-radius: 20px;
+}
+
+.nav .menu-icon {
+  display: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .nav .menu {
+    display: none;
+  }
+
+  .nav .menu-icon {
+    display: block;
+  }
+}
+/* E N D     N A V B A R     S T Y L E */
+
+/* ************************************************************************************************************************* */
+
+/* S T  A  R T       H E A  D E R        S T Y L E */
+.header {
+  min-height: 350px;
+  background-image: url("../img/background.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .search {
+  position: relative;
+}
+
+.header .search input {
+  display: block;
+  width: 100%;
+  padding: 20px 50px 20px 20px;
+  background: #1e202b;
+  color: #fff;
+  caret-color: var(--color-main);
+  outline: none;
+  border: none;
+  border-radius: 30px;
+}
+
+.header .search button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  padding: 0 2.5rem;
+  background-color: var(--color-main);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 30px;
+}
+/* E N D       H E A  D E R        S T Y L E */
+
+/* ************************************************************************************************************************* */
+
+/* S T A R T       M A I N      S T Y  L E */
+
+.main .forecast {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  position: relative;
+  top: -100px;
+}
+
+.main .forecast .card {
+  background-color: #323544;
+  color: #bfc1c8;
+  text-transform: capitalize;
+  flex: 1;
+}
+
+.main .forecast .card {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.main .forecast .card-one .card-head {
+  border-top-left-radius: 10px;
+}
+
+.main .forecast .card-three .card-head {
+  border-top-right-radius: 10px;
+}
+
+/* C A R D   O N E   S T Y L E */
+.main .forecast .card-one .card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem;
+  background-color: #2d303d;
+}
+
+.main .forecast .card-one .card-body {
+  padding: 1.875rem 1.25rem;
+}
+
+.main .forecast .card .card-body .location {
+  font-size: 1.2857142857em;
+  font-weight: 400;
+}
+
+.main .forecast .card-one .card-body .degree {
+  margin-right: 1.875rem;
+  font-size: 5.625rem;
+  color: #fff;
+}
+
+.main .forecast .card-one .card-body .degree img {
+  width: 90px;
+  height: 90px;
+}
+
+.main .forecast .card-one .card-body .custom {
+  margin: 1.25rem 0;
+  color: var(--color-main);
+}
+
+.main .forecast .card-one .card-footer span {
+  margin-right: 1rem;
+}
+
+.main .forecast .card-one .card-footer img {
+  width: 21px;
+  height: 21px;
+  margin-right: 0.5rem;
+}
+
+/* C A R D   T W O      &     T H R E E   S T Y L E */
+.main .forecast .card-two {
+  background-color: #262936;
+}
+
+.main .forecast .card-two .card-head,
+.main .forecast .card-three .card-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem;
+  background-color: #2d303d;
+}
+
+.main .forecast .card-two .card-head {
+  background-color: #222531;
+}
+
+.main .forecast .card-two .card-body img,
+.main .forecast .card-three .card-body img {
+  width: 48px;
+  margin-bottom: 1.25rem;
+}
+
+.main .forecast .card-two .card-body .degree,
+.main .forecast .card-three .card-body .degree {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.main .forecast .card-two .card-body .degree small,
+.main .forecast .card-three .card-body .degree small {
+  font-size: 1rem;
+  color: #bfc1c8;
+}
+
+.main .forecast .card-two .card-body .custom,
+.main .forecast .card-three .card-body .custom {
+  margin: 1.25rem;
+  color: var(--color-main);
+}
+
+.main .forecast .card-two .card-body,
+.main .forecast .card-three .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+@media (max-width: 992px) {
+  .main .forecast {
+    flex-direction: column;
+  }
+
+  .main .forecast .card-one .card-body .degree {
+    display: flex;
+    align-items: center;
+  }
+
+  .main .forecast .card-two .card-body,
+  .main .forecast .card-three .card-body {
+    padding: 3.125rem 1.25rem 0.625rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main .forecast .card-one .card-body .degree {
+    flex-direction: column;
+  }
+}
+
+/* E N D       M A I N      S T Y  L E */
+
+/* ************************************************************************************************************************* */
+
+/* S T A R T     F O O T E R     S T Y L E */
+.footer {
+  padding: 3.125rem 0;
+  background-color: #323544;
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.footer .row form {
+  flex: 2;
+  position: relative;
+}
+
+.footer .row .social-links {
+  flex: 1;
+}
+
+.footer .row form input {
+  padding: 1.25rem;
+  background: #1e202b;
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+}
+
+.footer .row form button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-main);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.footer .row .social-links {
+  margin-left: 2rem;
+}
+
+.footer .row .social-links a {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e202b;
+  color: var(--color-main);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.footer .row .social-links a:hover {
+  background-color: var(--color-main);
+  color: #fff;
+}
+
+.footer p {
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: #bfc1c8;
+}
+
+/* E N D     F O O T E R     S T Y L E */

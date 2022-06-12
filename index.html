@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- F O N T A W E S O M E -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- C U S T O M         C S S       F I L E -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- S T A R T       N A V B A R -->
+    <nav class="nav">
+      <div class="container row">
+        <a class="brand">
+          <img src="img/logo.png" alt="weather" />
+          <div class="logo">
+            <h1>
+              <span style="--order: 1">W</span>
+              <span style="--order: 1">E</span>
+              <span style="--order: 1">A</span>
+              <span style="--order: 1">T</span>
+              <span style="--order: 1">H</span>
+              <span style="--order: 1">E</span>
+              <span style="--order: 1">R</span>
+            </h1>
+            <small>tagline goes here</small>
+          </div>
+        </a>
+        <div class="menu">
+          <ul>
+            <li><a class="active" href="#">home</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">live cameras</a></li>
+            <li><a href="#">photos</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </div>
+        <div class="menu-icon">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <!-- E N D       N A V B A R -->
+
+    <!-- ================================================================================================================================== -->
+
+    <!-- S T A R T       H E A  D E R -->
+    <header class="header">
+      <div class="container" style="width: 100%">
+        <div class="search">
+          <form onsubmit="return false">
+            <input
+              type="search"
+              id="search"
+              placeholder="Find your location..."
+            />
+            <button id="find-btn">Find</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!-- E N D       H E A  D E R -->
+
+    <!-- ================================================================================================================================== -->
+
+    <!-- S T A R T       M A I N -->
+    <main class="main">
+      <div class="container">
+        <div class="forecast">
+          <div class="card card-one">
+            <div class="card-head">
+              <div class="day">friday</div>
+              <div class="date">10 june</div>
+            </div>
+            <div class="card-body">
+              <div class="location" id="location">Cairo</div>
+              <div class="degree">
+                <div><span class="temp_c"></span><sup>o</sup>C</div>
+                <img class="status-pic" src="img/sun.webp" alt="" />
+              </div>
+              <div class="custom" id="custom">clear</div>
+              <div class="card-footer">
+                <span
+                  ><img
+                    src="img/icon/icon-umberella.png"
+                    alt="weather"
+                  />20%</span
+                >
+                <span
+                  ><img
+                    src="img/icon/icon-wind.png"
+                    alt="weather"
+                  />18km/h</span
+                >
+                <span
+                  ><img
+                    src="img/icon/icon-compass.png"
+                    alt="weather"
+                  />East</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card card-two">
+            <div class="card-head">
+              <div class="day">friday</div>
+            </div>
+            <div class="card-body">
+              <div>
+                <div class="degree">
+                  <img class="status-pic" src="img/sun.webp" alt="weather" />
+                </div>
+                <div class="degree">
+                  <div id="num">
+                    <span class="temp_c">30</span><sup>o</sup>C
+                  </div>
+                  <small>24.9o</small>
+                </div>
+                <div class="custom">clear</div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-three">
+            <div class="card-head">
+              <div class="day">friday</div>
+            </div>
+            <div class="card-body">
+              <div>
+                <img class="status-pic" src="img/sun.webp" alt="weather" />
+                <div class="degree">
+                  <div><span class="temp_c">30</span><sup>o</sup>C</div>
+                  <small>24.9o</small>
+                </div>
+                <div class="custom">clear</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- E N D       M A I N -->
+
+    <!-- ================================================================================================================================== -->
+
+    <!-- S T A R T       F O O T E R -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <form>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email to subscribe..."
+            />
+            <button>Subscribe</button>
+          </form>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+          </div>
+        </div>
+        <p>
+          Copyright 2014 Company name. Designed by Themezy. All rights reserved
+        </p>
+      </div>
+    </footer>
+    <!-- E N D       F O O T E R -->
+
+    <!-- ================================================================================================================================== -->
+
+    <!-- C U S T O M     J S     F I L E -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
