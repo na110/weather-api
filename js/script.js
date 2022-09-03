@@ -8,7 +8,7 @@ let weather = {};
 
 async function api(callback) {
   var response = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=b8f119c697aa4e8da27155804221106&q=${callback}&aqi=no`
+    `https://api.weatherapi.com/v1/current.json?key=b8f119c697aa4e8da27155804221106&q=${callback}&aqi=no`
   );
 
   var finalResult = await response.json();
